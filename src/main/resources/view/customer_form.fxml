@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="751.0" prefWidth="1142.0" style="-fx-background-color: white; -fx-background-radius: 24;" styleClass="btnRoot" stylesheets="@../style/drop_shadow.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.CustomerFormController">
+   <children>
+      <ImageView fitHeight="48.0" fitWidth="47.0" layoutX="463.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icons/icons8-bread-and-rye-100.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="23.0" layoutY="14.0" prefHeight="32.0" prefWidth="96.0" text="Fresh Hub">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="485.0" layoutY="30.0" prefHeight="32.0" prefWidth="203.0" text="Manage Customers">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="979.0" layoutY="10.0" prefHeight="32.0" prefWidth="48.0" text="Date:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="980.0" layoutY="50.0" prefHeight="32.0" prefWidth="48.0" text="Time:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtCustomerName" alignment="CENTER" layoutX="439.0" layoutY="135.0" onAction="#txtGoToAddressOnAction" prefHeight="32.0" prefWidth="210.0" promptText="Customer Name" style="-fx-background-radius: 20;">
+         <font>
+            <Font size="14.0" />
+         </font></TextField>
+      <Label layoutX="77.0" layoutY="140.0" prefHeight="22.0" prefWidth="113.0" text="Customer ID :">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtPhoneNumber" alignment="CENTER" layoutX="142.0" layoutY="212.0" onAction="#txtSaveOnAction" prefHeight="32.0" prefWidth="210.0" promptText="Phone Nmber" style="-fx-background-radius: 20;">
+         <font>
+            <Font size="14.0" />
+         </font></TextField>
+      <JFXButton buttonType="RAISED" layoutX="799.0" layoutY="309.0" onAction="#btnDeleteOnAction" prefHeight="25.0" prefWidth="85.0" style="-fx-background-color: purple; -fx-background-radius: 16;" text="Delete" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="899.0" layoutY="309.0" onAction="#btnUpdateOnAction" prefHeight="25.0" prefWidth="85.0" style="-fx-background-color: purple; -fx-background-radius: 16;" text="Update" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="999.0" layoutY="309.0" onAction="#btnSaveOnAction" prefHeight="25.0" prefWidth="85.0" style="-fx-background-color: purple; -fx-background-radius: 16;" text="Save" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <TableView fx:id="tblCustomer" layoutX="166.0" layoutY="356.0" prefHeight="381.0" prefWidth="757.0" style="-fx-background-color: white; -fx-background-radius: 16;">
+        <columns>
+          <TableColumn fx:id="colCustomerID" prefWidth="139.0" text="Customer ID" />
+          <TableColumn fx:id="colCustomerName" prefWidth="218.0" text="Customer Name" />
+            <TableColumn fx:id="colPoneNumber" prefWidth="192.0" text="Phone Number" />
+            <TableColumn fx:id="colPoneNumber1" prefWidth="212.0" text="Delete/Update" />
+        </columns>
+      </TableView>
+      <Label fx:id="lblDate" layoutX="1029.0" layoutY="10.0" prefHeight="32.0" prefWidth="102.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblCustomerId" layoutX="192.0" layoutY="140.0" prefHeight="22.0" prefWidth="102.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtSearch" alignment="CENTER" layoutX="77.0" layoutY="303.0" onAction="#txtSearchOnActon" prefHeight="32.0" prefWidth="170.0" promptText="       Enter a ID to search" style="-fx-background-radius: 20;">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </TextField>
+      <ImageView fitHeight="25.0" fitWidth="27.0" layoutX="84.0" layoutY="307.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icons/icons8-search (1).gif" />
+         </image>
+      </ImageView>
+      <Label fx:id="lblTime" layoutX="1029.0" layoutY="50.0" prefHeight="32.0" prefWidth="102.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <JFXButton buttonType="RAISED" layoutX="699.0" layoutY="309.0" onAction="#btnClearOnAction" prefHeight="25.0" prefWidth="85.0" style="-fx-background-color: purple; -fx-background-radius: 16;" text="Clear" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <TextField fx:id="txtAddress" alignment="CENTER" layoutX="440.0" layoutY="212.0" onAction="#txtGoToAddressOnAction" prefHeight="32.0" prefWidth="210.0" promptText="Address" style="-fx-background-radius: 20;">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+   </children>
+</AnchorPane>

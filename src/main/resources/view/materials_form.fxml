@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="751.0" prefWidth="1095.0" style="-fx-background-color: white; -fx-background-radius: 24;" styleClass="btnRoot" stylesheets="@../style/drop_shadow.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.MaterialsFormController">
+   <children>
+      <Label layoutX="459.0" layoutY="50.0" prefHeight="32.0" prefWidth="188.0" text="Manage Materials">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="976.0" layoutY="10.0" prefHeight="32.0" prefWidth="47.0" text="Date:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="978.0" layoutY="50.0" prefHeight="32.0" prefWidth="47.0" text="Time:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField alignment="CENTER" layoutX="79.0" layoutY="174.0" prefHeight="32.0" prefWidth="210.0" promptText="Product Name" style="-fx-background-radius: 20;" />
+      <Label layoutX="83.0" layoutY="130.0" prefHeight="22.0" prefWidth="94.0" text="Material ID :">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <TextField alignment="CENTER" layoutX="81.0" layoutY="232.0" prefHeight="32.0" prefWidth="210.0" promptText="Quantity" style="-fx-background-radius: 20;" />
+      <JFXButton buttonType="RAISED" layoutX="652.0" layoutY="312.0" onAction="#btnDeleteOnAction" prefHeight="25.0" prefWidth="85.0" style="-fx-background-color: purple; -fx-background-radius: 16;" text="Delete" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="752.0" layoutY="312.0" onAction="#btnUpdateOnAction" prefHeight="25.0" prefWidth="85.0" style="-fx-background-color: purple; -fx-background-radius: 16;" text="Update" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="852.0" layoutY="312.0" onAction="#btnSaveOnAction" prefHeight="25.0" prefWidth="85.0" style="-fx-background-color: purple; -fx-background-radius: 16;" text="Save" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXButton>
+      <TableView layoutX="79.0" layoutY="357.0" prefHeight="357.0" prefWidth="868.0" style="-fx-background-color: white; -fx-background-radius: 16;">
+         <columns>
+            <TableColumn prefWidth="136.0" text="Material ID" />
+            <TableColumn prefWidth="353.0" text="Material Name" />
+            <TableColumn prefWidth="154.0" text="Quantity On Hand" />
+            <TableColumn prefWidth="224.0" text="Action" />
+         </columns>
+      </TableView>
+      <Label fx:id="lblDate" layoutX="1026.0" layoutY="10.0" prefHeight="32.0" prefWidth="102.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTime" layoutX="1028.0" layoutY="50.0" prefHeight="32.0" prefWidth="102.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <JFXButton buttonType="RAISED" layoutX="552.0" layoutY="312.0" prefHeight="25.0" prefWidth="85.0" style="-fx-background-color: purple; -fx-background-radius: 16;" text="Clear" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXButton>
+      <TextField alignment="CENTER" layoutX="82.0" layoutY="313.0" prefHeight="32.0" prefWidth="210.0" promptText="       Enter a ID to search" style="-fx-background-radius: 20;">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </TextField>
+      <AnchorPane layoutX="417.0" layoutY="138.0" prefHeight="123.0" prefWidth="259.0" style="-fx-background-color: rgba(162, 155, 254,1.0); -fx-background-radius: 20;" />
+      <AnchorPane layoutX="697.0" layoutY="138.0" prefHeight="123.0" prefWidth="238.0" style="-fx-background-color: rgba(140, 122, 230,1.0); -fx-background-radius: 20;" />
+      <Label layoutX="459.0" layoutY="143.0" prefHeight="32.0" prefWidth="188.0" text="Total Material Categoreis" textFill="WHITE">
+         <font>
+            <Font name="FreeSans Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="766.0" layoutY="143.0" prefHeight="32.0" prefWidth="114.0" text="Total Materials" textFill="WHITE">
+         <font>
+            <Font name="FreeSans Bold" size="15.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="22.0" fitWidth="20.0" layoutX="94.0" layoutY="318.0">
+         <image>
+            <Image url="@../../../../../../Downloads/icons8-search-32.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
